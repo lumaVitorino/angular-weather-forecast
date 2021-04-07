@@ -1,0 +1,16 @@
+<section class="mt-3 mb-3">
+	<div  class="ml-0 mt-5 row">
+		<div *ngFor="let forcastday of forecastDays"  class="border-right mt-3 p-2">
+			<div class="d-inline-flex flex-row justify-content-around ">
+				<div class="d-flex flex-column">
+					<h3 class="mx-auto date"><strong>{{ forcastday.date | date:'mediumDate' }}</strong></h3>
+					<p class="mx-auto">{{forcastday.day.mintemp_c}} °C / {{forcastday.day.maxtemp_c}} °C </p>
+					<img src="{{forcastday.day.condition?.icon}}"/>
+					<p class="mx-auto"><strong>{{forcastday.day.condition?.text}}</strong></p>
+					<h3 class="d-flex flex-column mx-auto"><span class="material-icons">umbrella</span> {{ forcastday.day.avghumidity }}%</h3>
+				</div>
+			</div>
+			
+    	</div>
+	</div>
+</section>

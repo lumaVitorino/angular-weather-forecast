@@ -1,0 +1,15 @@
+<section class="mt-3 mb-3">
+	<div  class="ml-0 mt-5 row align-elements">
+		<div class="ssearch-form mx-auto w-50 mt-3">
+			<form #f="ngForm" class="mb-2" role="search">
+				<div class="input-group">
+					<input type="search" name="queryTerm" class="form-control" placeholder="Enter you location info" [(ngModel)]="queryTerm" >
+					<div class="input-group-append">
+						<button class="btn btn-search" (click)="onSearch()" type="button">Search</button>
+					</div>
+        		</div>
+      		</form>
+    	</div>
+	</div>
+</section>
+<app-weather-details [fullWeather]="fullWeather" ></app-weather-details>
