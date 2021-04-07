@@ -53,4 +53,6 @@ describe('WeatherDetailsComponent', () => {
     fixture.whenStable().then(() => {
       expect(details.querySelector('app-forecast-details')).toBeTruthy();
     });
+  }));
+
 });

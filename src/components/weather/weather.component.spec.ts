@@ -42,6 +42,7 @@ describe('WeatherComponent', () => {
 
       expect(fixture.componentInstance.queryTerm).toBe('London');
     });
+  }));
 
   it('should on Search button', waitForAsync(() => {
     const fixture = TestBed.createComponent(WeatherComponent);
@@ -56,4 +57,5 @@ describe('WeatherComponent', () => {
       expect(weather.onSearch).toHaveBeenCalled();
     });
   }));
+
 });
